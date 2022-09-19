@@ -1,3 +1,17 @@
+# Building:
+To build you need to go to https://github.com/FAForever/Neroxis-Map-Generator and download the latest jar file. (this example is using 1.8.8) 
+and place it in the same directory as the docker file. 
+
+```
+docker build -t mapgen
+```
+
+# Using:
+
+```
+docker run -it --rm -v <output folder>:/output -e HEAP_SIZE=<heapsize if other than 6g> mapgen <args for mapgen>
+```
+
 Info for Java runtime:
 ```
 -Xms<size>        set initial Java heap size
